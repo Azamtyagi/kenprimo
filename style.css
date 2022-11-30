@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(204, 204, 204);
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+}
+
+.header img {
+    text-align: center;
+    height: 139px;
+    width: 1008px;
+    aspect-ratio: auto 1008 / 139;
+    margin-bottom: -4px;
+}
+
+.nav-box {
+    background-color: #CCCCCC;
+    overflow: hidden;
+    width: 1008px;
+    margin: auto;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #cc0000;
+}
+
+.navbar a {
+    float: left;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 15px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/*slder iteam*/
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    padding-top: 10px;
+}
+
+.mySlides {
+    display: none;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: 0x;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 20px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@media(max-width:1048px) {
+    .slideshow-container {
+        width: 1008px;
+        padding-left: 8px;
+    }
+}
+
+@media(max-width:1048px) {
+    span {
+        text-align: center;
+    }
+}
+
+
+/*Sectioniteams*/
+
+.section {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.sec-bar {
+    background: #fdf7e6;
+    overflow: hidden;
+    width: 1008px;
+    margin: auto;
+    position: relative;
+}
+
+.head-par {
+    width: 650px;
+    padding: 20px;
+    position: absolute;
+}
+
+.head-par h1 {
+    color: rgb(153, 0, 0);
+    font-size: medium;
+    padding-left: 10px;
+}
+
+.head-par p {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    text-align: justify;
+}
+
+.news-event {
+    width: 350px;
+    height: 270px;
+    background: rgb(204, 204, 204);
+    border-radius: 20px;
+    margin: 20px;
+    float: right;
+}
+
+.news-event h1 {
+    font-size: 15px;
+    margin: 20px;
+}
+
+
+/*---------------*/
+
+.scroll-left {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.scroll-left p {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 18px;
+    text-align: center;
+    /* Starting position */
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    /* Apply animation to this element */
+    -moz-animation: scroll-down 15s linear infinite;
+    -webkit-animation: scroll-left 10s linear infinite;
+    animation: scroll-left 10s linear infinite;
+    font-size: 15px;
+    text-decoration: underline;
+    margin-top: 25px;
+}
+
+
+/* Move it (define the animation) */
+
+@-moz-keyframes scroll-left {
+    0% {
+        -moz-transform: translateX(100%);
+    }
+    100% {
+        -moz-transform: translateX(-100%);
+    }
+}
+
+@-webkit-keyframes scroll-left {
+    0% {
+        -webkit-transform: translateX(100%);
+    }
+    100% {
+        -webkit-transform: translateX(-100%);
+    }
+}
+
+@keyframes scroll-left {
+    0% {
+        -moz-transform: translateX(100%);
+        /* Browser bug fix */
+        -webkit-transform: translateX(100%);
+        /* Browser bug fix */
+        transform: translateX(100%);
+    }
+    100% {
+        -moz-transform: translateX(-100%);
+        /* Browser bug fix */
+        -webkit-transform: translateX(-100%);
+        /* Browser bug fix */
+        transform: translateX(-100%);
+    }
+}
+
+.scroll-left .p2 {
+    padding-top: 100px;
+}
+
+.scroll-left .p3 {
+    padding-top: 60px;
+}
+
+
+/*---------------*/
+
+.no-sported {
+    width: 600px;
+    height: 150px;
+    background: white;
+    position: absolute;
+    margin-top: 230px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.no-sported h5 {
+    margin-top: 50px;
+}
+
+.emergency-help {
+    width: 350px;
+    height: 100px;
+    float: right;
+    margin-left: 269px;
+    margin-right: 20px;
+}
+
+
+/*feeder iteams*/
+
+.feeder {
+    width: 1008px;
+    margin: auto;
+    background: #fdf7e6;
+    height: 50px;
+    text-align: center;
+}
+
+.feed-bar {
+    padding-top: 12px;
+    background: rgb(153, 153, 153);
+    height: 55px;
+    margin-top: 10px;
+}
+
+.feed-bar a {
+    margin-left: 14px;
+    font-size: 15px;
+    text-decoration: underline;
+    color: white;
+}
+
+.feed-bar p {
+    font-size: 10px;
+    margin-top: 8px;
+    color: white;
+    letter-spacing: 1px;
+}
